@@ -1,0 +1,7 @@
+# Change the speed limits of the goToPose server while it is running.
+# Both values must be finite and > 0.
+float64 max_linear_speed    # units/s
+float64 max_angular_speed   # rad/s
+---
+bool success
+string message
