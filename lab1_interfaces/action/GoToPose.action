@@ -1,0 +1,13 @@
+# Goal: drive the turtle to a pose
+lab1_interfaces/TargetPose target
+---
+# Result
+bool success
+float32 distance_error   # final position error
+float32 yaw_error        # final heading error (rad)
+string message
+---
+# Feedback
+float32 distance_remaining
+float32 angle_remaining  # heading error while moving, yaw error during the final rotation
+string phase             # rotate_to_heading | drive | rotate_to_yaw

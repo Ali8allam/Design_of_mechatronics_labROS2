@@ -1,0 +1,18 @@
+# Tuning parameters. NOTE: floats must be written with a decimal point (2.0, not 2).
+# The speed limits (max_linear_speed / max_angular_speed) are passed from the launch file:
+#   ros2 launch lab1_bringup system.launch.py max_linear_speed:=1.0 max_angular_speed:=1.5
+go_to_pose_server:
+  ros__parameters:
+    position_tolerance: 0.05   # units
+    angle_tolerance: 0.03      # rad
+    k_linear: 1.5
+    k_rotate: 4.0
+    k_heading: 6.0
+    control_rate_hz: 50.0
+    goal_timeout_sec: 60.0
+
+square_action_server:
+  ros__parameters:
+    default_side_length: 3.0
+    max_side_length: 5.0
+    settle_time_sec: 0.3
